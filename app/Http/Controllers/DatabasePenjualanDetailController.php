@@ -30,21 +30,8 @@ class DatabasePenjualanDetailController extends Controller
                 ->addColumn('barang.harga_jual', function ($row) {
                     return $row->barang->harga_jual;
                 })
-                ->addColumn('options', function ($detailPenjualan) {
-                    $deleteUrl = route('penjualan.destroy', $detailPenjualan->kode_transaksi); // Assuming 'destroy' is the route name for deleting a 'vendor'
-                    return "<a style='border: none; background-color:transparent;' class='hapusData' data-kode_detailPenjualan='$detailPenjualan->kode_transaksi' data-url='$deleteUrl'><i class='fas fa-trash fa-lg text-danger'></i></a>";
-                })
-                ->rawColumns(['options'])
                 ->make(true);
         }
         return response()->json(['message' => 'Unauthorized'], 403);
-    }
-
-    public function hapusPenjualan($kode_transaksi)
-    {
-        $penjualan = DatabasePenjualan::findOrFail($kode_transaksi);
-        $penjualan->delete();
-
-        return response()->json(['msg' => 'Data Penjualan berhasil dihapus.']);
     }
 }

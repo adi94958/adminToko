@@ -133,7 +133,7 @@ $navigation_links = json_decode(json_encode($links));
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="/dashboard/admin" class="brand-link d-flex justify-content-center align-items-center">
-    <i class="fas fa-tshirt" style="color: #d6d8d9; margin-right: 10px;"></i>
+    <span><img src="{{ asset('img/logo.png') }}" alt="logo" style="height: 40px;"></span>
     <span class="brand-text font-weight-light">Girls Wardrobe</span>
   </a>
 

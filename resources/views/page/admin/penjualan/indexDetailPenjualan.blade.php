@@ -49,7 +49,6 @@
                         <th>Nama Barang</th>
                         <th>Harga Jual</th>
                         <th>Total</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -97,9 +96,6 @@
                 },
                 {
                     "data": "jumlah"
-                },
-                {
-                    "data": "options"
                 }
             ],
             "language": {
