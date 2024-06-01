@@ -101,7 +101,7 @@ class DatabasePembelianController extends Controller
         return view('page.admin.pembelian.addPembelian', compact('newInvoiceNumber', 'vendors', 'barangs'));
     }
 
-    public function hapusPenjualan($kode_transaksi)
+    public function hapusPembelian($kode_transaksi)
     {
         $pembelian = DatabasePembelian::findOrFail($kode_transaksi);
         $pembelian->delete();
